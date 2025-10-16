@@ -11,7 +11,6 @@
       --lila:#7B5FA6;
       --negre:#0b0b0b;
       --taronja:#ff6a00;
-      --bg:#ffffff;
       --max-width:1100px;
     }
     *{box-sizing:border-box}
@@ -19,29 +18,29 @@
     a{color:inherit;text-decoration:none}
     header{background:linear-gradient(90deg,var(--lila),rgba(123,95,166,0.9));color:white;padding:28px 16px}
     .container{max-width:var(--max-width);margin:0 auto;padding:0 16px}
-    .topbar{display:flex;align-items:center;justify-content:space-between}
+    .topbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
     .brand{display:flex;gap:12px;align-items:center}
     .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--taronja),var(--lila));display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:18px}
     nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
     nav a{padding:8px 10px;border-radius:8px;font-weight:600}
     .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:46px 0}
-    .hero h1{font-size:32px;margin:0 0 12px}
+    .hero h1{font-size:34px;margin:0 0 12px}
     .hero p{margin:0 0 20px;line-height:1.5}
-    .cta{display:flex;gap:12px;align-items:center}
-    .btn{background:var(--negre);color:white;padding:12px 18px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+    .cta{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .btn{background:var(--negre);color:white;padding:12px 18px;border-radius:10px;font-weight:700;border:0;cursor:pointer;text-align:center}
     .btn-outline{background:transparent;border:2px solid white;color:white;padding:10px 16px;border-radius:10px;font-weight:700}
     .card{background:white;border-radius:14px;box-shadow:0 6px 18px rgba(16,24,40,0.06);padding:20px}
-    .card h3{margin:0 0 8px}
     section{padding:36px 0}
     h2{color:var(--lila);margin:0 0 8px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+    ul{margin:0 0 12px 20px}
     .prices{display:flex;flex-direction:column;gap:10px}
     .price-row{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfbff);border:1px solid #efeff5}
     .price{font-weight:700}
     .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:20px}
     .gallery img{width:100%;border-radius:16px;object-fit:cover}
-    footer{padding:22px 0;background:#0b0b0b;color:white;text-align:center}
-    @media(max-width:900px){.hero{grid-template-columns:1fr;}nav ul{display:none}}
+    .contact-card{display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:flex-start}
+    footer{padding:22px 0;background:#0b0b0b;color:white;text-align:center;font-size:14px;line-height:1.6}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;}nav ul{display:none}.contact-card{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -62,29 +61,66 @@
         </ul>
       </nav>
     </div>
+    <div class="container hero">
+      <div>
+        <h1>Entrena amb motivació, constància i resultats reals.</h1>
+        <p style="font-style:italic;color:#f0e9ff;">Entrena amb força, viu amb energia.</p>
+        <div class="cta">
+          <a class="btn" href="#contacte">Reserva la teva sessió</a>
+          <a class="btn btn-outline" href="tel:+34671448701">Truca / WhatsApp</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Serveis destacats</h3>
+        <div class="prices">
+          <div class="price-row"><div>Sessió personal (1 h)</div><div class="price">25 €</div></div>
+          <div class="price-row"><div>Pack 4 sessions / mes</div><div class="price">90 €</div></div>
+          <div class="price-row"><div>Sessió en grup reduït (per persona)</div><div class="price">15 €</div></div>
+          <div class="price-row"><div>Entrenament online</div><div class="price">18 €</div></div>
+        </div>
+      </div>
+    </div>
   </header>
   <main class="container">
     <section id="qui-soc">
       <h2>Qui soc</h2>
       <div class="card">
-        <p>Sóc <strong>Laia Fernández Torres</strong>, una apassionada de l’esport i de tot el que envolta el moviment. Des de petita he entès l’activitat física com una eina per créixer, superar-se i sentir-se bé, tant físicament com mentalment.</p>
-        <p>Formació:</p>
+        <p>Sóc <strong>Laia Fernández Torres</strong>, una apassionada de l’esport i de tot el que envolta el moviment. Des de petita he entès l’activitat física com una eina per créixer, superar-se i sentir-se bé, tant físicament com mentalment. Aquesta passió m’ha portat a dedicar-me professionalment a ajudar altres persones a descobrir el seu potencial a través de l’entrenament.</p>
+        <p>La meva formació inclou:</p>
         <ul>
           <li>Tècnica Superior en Ensenyament i Animació Socioesportiva</li>
           <li>Monitora de musculació i fitness</li>
           <li>Entrenadora personal</li>
           <li>Certificada com a experta en biomecànica aplicada a l’entrenament de força</li>
         </ul>
-        <div class="gallery">
-          <img src="IMG_1462.jpg" alt="Laia entrenant amb barra">
-          <img src="IMG_3360.jpg" alt="Laia escalant rocòdrom">
-          <img src="IMG_3394.jpg" alt="Laia fent exercicis amb manuelles">
+        <p>El meu objectiu és oferir-te entrenaments personalitzats i basats en la ciència del moviment perquè aconsegueixis els teus objectius d’una manera segura, efectiva i motivadora.</p>
+      </div>
+    </section>
+
+    <section id="serveis">
+      <h2>Serveis i preus</h2>
+      <div class="card">
+        <div class="prices">
+          <div class="price-row"><div><strong>Sessió personal (1 h)</strong></div><div class="price">25 €</div></div>
+          <div class="price-row"><div><strong>Pack 4 sessions / mes</strong></div><div class="price">90 €</div></div>
+          <div class="price-row"><div><strong>Sessió en grup reduït (per persona)</strong></div><div class="price">15 €</div></div>
+          <div class="price-row"><div><strong>Entrenament online</strong></div><div class="price">18 €</div></div>
         </div>
+      </div>
+    </section>
+
+    <section id="contacte">
+      <h2>Contacte</h2>
+      <div class="card">
+        <p><strong>Telèfon / WhatsApp:</strong> <a href="https://wa.me/34671448701">+34 671 448 701</a><br>
+        <strong>Correu:</strong> <a href="mailto:laiaft12@gmail.com">laiaft12@gmail.com</a><br>
+        <strong>Ubicació:</strong> Vic (Barcelona)</p>
       </div>
     </section>
   </main>
   <footer>
-    © Laia Fernández Torres · Entrenadora personal · Vic
+    <div>© Laia Fernández Torres · Entrenadora personal · Vic<br>
+    📞 <a href="tel:+34671448701" style="color:#fff;">+34 671 448 701</a> · ✉️ <a href="mailto:laiaft12@gmail.com" style="color:#fff;">laiaft12@gmail.com</a></div>
   </footer>
 </body>
 </html>
